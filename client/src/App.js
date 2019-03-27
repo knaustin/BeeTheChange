@@ -1,13 +1,10 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Farmer from "./pages/User";
-// import Main from "./pages/Main";
 import Search from "./pages/Search";
 import Settings from "./pages/Settings";
 import Devpage from './pages/Devpage';
 import Home from "./pages/Home";
-// import Auth from './Auth/Auth.js';
-// import { Button } from 'react-bootstrap';
 
 class App extends Component {
   goTo(route) {
@@ -31,16 +28,11 @@ class App extends Component {
   }
 
   render() {
-    // const { isAuthenticated } = this.props.auth;
-
-    // <Button bsStyle="primary" className="btn-margin" onClick={this.goTo.bind(this, 'home')}>Home</Button>
-    // {!isAuthenticated() && (<Button bsStyle="primary" className="btn-margin" onClick={this.login.bind(this)}>Log In</Button>)}
-    // { isAuthenticated() && (<Button bsStyle="primary" className="btn-margin" onClick={this.logout.bind(this)}>Log Out</Button>)}
+    const { isAuthenticated } = this.props.auth;
 
     return (
       <Router>
         <Switch>
-          {/* <Route exact path="/" component={Main} /> */}
           <Route path="/" exact={true} component={Home} />
           <Route exact path="/farmer/:id" component={Farmer} />
           <Route exact path="/search" component={Search} />
