@@ -3,7 +3,7 @@ const db = require('../models');
 
 module.exports = {
     findAll: (req, res) => {
-        db.Farmer.find().then(dbFarmers => {
+        db.Farmer.find(req.query.name ? { Name: new RegExp(req.query.name, 'i') } : {}).then(dbFarmers => {
             res.json(dbFarmers);
         });
     },

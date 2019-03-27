@@ -11,6 +11,7 @@ import PostsContainer from '../components/PostsContainer';
 import Postform from "../components/Postform";
 // import Followcard from '../components/Followcard';
 import Aboutuser from '../components/Aboutuser';
+import API from '../utils/API';
 
 const messages = [
     {
@@ -46,20 +47,15 @@ const DivStyle = {
 
 class User extends Component {
     state = {
+        farmer: null,
         selectedPostId: null,
     };
 
-    handleInputChange = event => {
-        const name = event.target.name;
-        const value = event.target.value;
-        this.setState({
-            [name]: value,
-        });
-    };
-
-    handleFormSubmit = event => {
-        event.preventDefault();
-    };
+    componentDidMount() {
+        API.getFarmer(this.props.match.params.id)
+            .then(res => this.setState({ farmer: res.data }))
+            .catch(err => console.error(err));
+    }
 
     render() {
         return (
@@ -68,7 +64,7 @@ class User extends Component {
                 <Usercover>
                     <Row>
                         <Col md={6}>
-                            <Usercard />
+                            <Usercard user={this.state.farmer} />
                         </Col>
                         <Col md={3}></Col>
                         <Col md={3}>
@@ -80,30 +76,30 @@ class User extends Component {
                     <Container style={DivStyle}>
                         <Row>
                             <Col md={3}>
-                                <Aboutuser />
+                                <Aboutuser user={this.state.farmer} />
                             </Col>
-                                <Col xs={6}>
-                                        <Container>
-                                            <Postform />
-                                            <PostsContainer messages={messages} />
-                                        </Container>
-                                </Col>
-                                <Col md={3}>
-                                    <Tiers
-                                        tierlevel="Getting Started"
-                                        tierprice="5$"
-                                        tierdescription="Help pay for the care of the Bee's and get updates"
-                                    />
-                                    <Tiers
-                                        tierlevel="Help A Hive"
-                                        tierprice="$10"
-                                        tierdescription="Sponsor Bee care and get 1 bottle of honey"
-                                    />
-                                    <Tiers
-                                        tierlevel="Start A Hive"
-                                        tierprice="$150"
-                                        tierdescription="Start a hive, get 10% of the honey output every season"
-                                    />
+                            <Col xs={6}>
+                                <Container>
+                                    <Postform />
+                                    <PostsContainer messages={messages} />
+                                </Container>
+                            </Col>
+                            <Col md={3}>
+                                <Tiers
+                                    tierlevel="Getting Started"
+                                    tierprice="$5"
+                                    tierdescription="Help pay for the care of the Bee's and get updates"
+                                />
+                                <Tiers
+                                    tierlevel="Help A Hive"
+                                    tierprice="$10"
+                                    tierdescription="Sponsor Bee care and get 1 bottle of honey"
+                                />
+                                <Tiers
+                                    tierlevel="Start A Hive"
+                                    tierprice="$150"
+                                    tierdescription="Start a hive, get 10% of the honey output every season"
+                                />
                             </Col>
                         </Row>
                     </Container>

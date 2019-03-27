@@ -21,12 +21,8 @@ function MainNav(props) {
         </span>
       </Navbar.Brand>
       <Nav.Link href="/" className={"MainNav"}>|| Home</Nav.Link>
-<<<<<<< HEAD
       <Nav.Link href="/settings" className={"MainNav"}>|| Settings</Nav.Link>
-      <Nav.Link href="/developer" className={"MainNav"}>|| The Team</Nav.Link>
-=======
-      {/* <Nav.Link href="/settings" className={"MainNav"}>|| Settings</Nav.Link> */}
->>>>>>> f1068dba5f5a77974a2c071d9bd3a69629c134cb
+      <Nav.Link href="/developers" className={"MainNav"}>|| The Team</Nav.Link>
       <span className={'navbarSpan'}></span>
       <SearchForm handleFormSubmit={() => { console.log('Handle Form Submit'); }} />
     </Navbar>

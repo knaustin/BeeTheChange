@@ -59,7 +59,7 @@ class Devpage extends Component {
                 </Grid>
                 <Footer />
             </Wrapper>
-        )
+        );
     }
 }
 

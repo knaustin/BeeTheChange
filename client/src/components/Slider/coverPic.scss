@@ -1,11 +1,7 @@
-.capOne {
-    padding-bottom: 400px;
-}
-
-.capTwo {
-    padding-bottom: 400px;
-}
-
-.capThree {
-    padding-bottom: 400px;
+.capOne, .capTwo, .capThree {
+    padding-bottom: 500px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: bolder;
+    font-size: 30px;
+    color: white;
 }

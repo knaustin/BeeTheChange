@@ -1,14 +1,13 @@
-
 import React, { Component } from "react";
 import FrontNav from "../components/FrontNav";
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import { Row, Col } from 'react-flexbox-grid';
 import Slider from "../components/Slider/Slider";
 // import SectionA from "../components/SectionA";
 // import Footer from "../components/Footer";
 import Wrapper from "../components/Wrapper";
 // import Container from "react-bootstrap/Container";
 import Section from '../components/Section';
-
+// import { Container } from "mdbreact";
 
 class Main extends Component {
     render() {
@@ -30,7 +29,7 @@ class Main extends Component {
         )
     };
     };
-    export default Main;
+export default Main;
     
 
 {/* <Wrapper> */}
