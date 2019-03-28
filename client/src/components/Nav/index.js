@@ -5,7 +5,7 @@ import "./Nav.scss";
 import Logo from '../../../src/logo.svg';
 import SearchForm from '../SearchForm';
 
-function MainNav(props) {
+function MainNav() {
   return (
     <Navbar className="navbarStyle">
       <Navbar.Brand className="navheader" href="#home">
@@ -23,6 +23,7 @@ function MainNav(props) {
       <Nav.Link href="/" className={"MainNav"}>|| Home</Nav.Link>
       <Nav.Link href="/settings" className={"MainNav"}>|| Settings</Nav.Link>
       <Nav.Link href="/developers" className={"MainNav"}>|| The Team</Nav.Link>
+      {/* <Nav.Link href="/logout" className={"MainNav"}>|| Logout</Nav.Link> */}
       <span className={'navbarSpan'}></span>
       <SearchForm handleFormSubmit={() => { console.log('Handle Form Submit'); }} />
     </Navbar>

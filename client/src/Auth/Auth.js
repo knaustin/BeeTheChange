@@ -1,9 +1,21 @@
+import auth0 from 'auth0-js';
 import history from '../history';
 
 export default class Auth {
   accessToken;
   idToken;
   expiresAt;
+  auth0 = new auth0.WebAuth({
+    domain: 'beethechange.auth0.com',
+    clientID: 'dMjKHTchLHDIkrx4FkJrsDPy7bgJKMS3',
+    redirectUri: 'http://localhost:3000/auth-callback',
+    responseType: 'token id_token',
+    scope: 'openid',
+  });
+
+  login() {
+    this.auth0.authorize();
+  }
 
   constructor() {
     this.login = this.login.bind(this);
@@ -20,7 +32,7 @@ export default class Auth {
       if (authResult && authResult.accessToken && authResult.idToken) {
         this.setSession(authResult);
       } else if (err) {
-        history.replace('/home');
+        history.replace('/');
         console.log(err);
         alert(`Error: ${err.error}. Check the console for further details.`);
       }
@@ -46,7 +58,7 @@ export default class Auth {
     this.expiresAt = expiresAt;
 
     // navigate to the home route
-    history.replace('/home');
+    history.replace('/');
   }
 
   renewSession() {
@@ -71,7 +83,7 @@ export default class Auth {
     localStorage.removeItem('isLoggedIn');
 
     // navigate to the home route
-    history.replace('/home');
+    history.replace('/');
   }
 
   isAuthenticated() {

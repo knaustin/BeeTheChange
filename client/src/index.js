@@ -4,4 +4,4 @@ import './index.scss';
 import App from './App';
 import Auth from './Auth/Auth';
 
-ReactDOM.render(<App auth={Auth} />, document.getElementById('root'));
+ReactDOM.render(<App auth={new Auth()} />, document.getElementById('root'));

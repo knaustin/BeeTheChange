@@ -2,12 +2,12 @@ import axios from 'axios';
 
 export default {
     getFarmers: name => {
-        return axios.get(`http://localhost:3001/api/farmers?name=${name}`);
+        return axios.get(`http://localhost:3000/api/farmers?name=${name}`);
     },
     getFarmer: id => {
-        return axios.get(`http://localhost:3001/api/farmers/${id}`);
+        return axios.get(`http://localhost:3000/api/farmers/${id}`);
     },
     getUser: id => {
-        return axios.get(`http://localhost:3001/api/users/${id}`);
+        return axios.get(`http://localhost:3000/api/users/${id}`);
     },
 };
