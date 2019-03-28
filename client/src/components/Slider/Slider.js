@@ -38,7 +38,8 @@ class Slider extends React.Component {
             />
             <Carousel.Caption className="capOne">
               <h3>Save The Bees</h3>
-              <p>Bee the Change allows you to help the dwindeling bee population</p>
+              <br />
+              <p>Honey bees perform about 80 percent of all the pollination world wide.</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -48,8 +49,9 @@ class Slider extends React.Component {
               alt="second slide"
             />
             <Carousel.Caption className="capTwo">
-              <h3>Sponser A Farmer</h3>
-              <p>Donate money to a local farmer to help care for the bees.</p>
+              <h3>Sponsor A Farmer</h3>
+              <br />
+              <p>Donate money to a local farmer to help care for the bees in exchange for rewards.</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
@@ -59,10 +61,9 @@ class Slider extends React.Component {
               alt="Third slide"
             />
             <Carousel.Caption className="capThree">
-              <h3>Be A Sponser</h3>
-              <p>
-                Sponsering farmers and hives will allow you to unlock rewards.
-              </p>
+              <h3>Register Your Hives</h3>
+              <br/>
+              <p>Register your hives to help with the cost of caring for them.</p>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>

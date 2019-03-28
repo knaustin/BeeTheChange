@@ -13,17 +13,17 @@
 }
 
 .MainNav {
-  color: #EDEFFF !important;
-  text-decoration: none !important;
-  font-family: 'Noto Sans KR', sans-serif;
-
+   color: #EDEFFF !important;
+   text-decoration: none !important;
+   font-family: 'Noto Sans KR', sans-serif;
 }
 
 .MainNavButt {
   color: #EDEFFF;
-  border: #EDEFFF 1px solid;
+  // border: #EDEFFF 1px solid;
   font-family: 'Noto Sans KR', sans-serif;
 }
+
 .MainNavButt:hover {
   color: #EDEFFF;
   background-color: transparent;
@@ -34,9 +34,12 @@
   width: 30%;
 }
 
-
 @media only screen and (max-width: 680px) {
   .navbarSpan {
     width: 20px;
   }
- }
+}
+
+Nav.link{
+color:#EDEFFF;
+};

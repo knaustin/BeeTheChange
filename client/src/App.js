@@ -17,9 +17,9 @@ function App() {
           {/* TODO: Update Settings To Not Require User Id Param After Authentication Is Implemented */}
           <Route exact path="/settings/:id" component={Settings} />
           <Route exact path="/developers" component={Devpage} />
-          <Route exact path="/farmersearch" component={Farmersearch} />
+          {/* <Route exact path="/farmersearch" component={Farmersearch} /> */}
         </Switch> 
-      </div>
+      {/* </div> */}
     </Router>
   );
 }

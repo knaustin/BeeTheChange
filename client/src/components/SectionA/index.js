@@ -1,13 +1,17 @@
 import React from "react";
-
+import "./sectionA.scss";
 function SectionA() {
   return (
     <div>
-      <h1>About Be The Change:</h1>
-      <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut laoreet eros eu scelerisque commodo. Ut auctor erat ac interdum egestas. Morbi aliquet elit id aliquet ornare. Integer in commodo mauris, non fringilla lacus. Donec fermentum mi ac magna ultrices, nec scelerisque nisi eleifend. Nulla placerat, tortor a vehicula pretium, ligula sem sollicitudin quam, eu sodales erat est in diam. Donec convallis at leo et accumsan. Sed porta faucibus enim.</h4>
+     <header className="changeHead">
+     <h1>About "Be The Change":</h1>
+     </header>
+      <h3>"Be The Change" is an application that allows farmers to get sponsorships to care for their bees. People can sign up and sponsor farmers inexchange for rewards based off of their donation."Be The Change" main goal is to help save the bee population which is quickly dwindling. By sponsoring bee hives, community gardens, and farmers, you can contribute to ensuring your tomorrow.  </h3>
       <br />
-      <h1>Why Help The Bees?</h1>
-      <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut laoreet eros eu scelerisque commodo. Ut auctor erat ac interdum egestas. Morbi aliquet elit id aliquet ornare. Integer in commodo mauris, non fringilla lacus. Donec fermentum mi ac magna ultrices, nec scelerisque nisi eleifend. Nulla placerat, tortor a vehicula pretium, ligula sem sollicitudin quam, eu sodales erat est in diam. Donec convallis at leo et accumsan. Sed porta faucibus enim.</h4>
+     <header className="helpHead">
+     <h1>Why Help The Bees?</h1>
+     </header>
+      <h3>Bees are detrimental to our survival.Honey bees perform about 80 percent of all pollination worldwide. A single bee colony can pollinate 300 million flowers each day. Seventy precnt of the top human hood crops are pollinated by bees. These crops supply about 90 percent of the world's nutrition.</h3>
 
         
 
