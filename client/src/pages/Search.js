@@ -5,6 +5,19 @@ import Wrapper from "../components/Wrapper";
 import Footer from "../components/Footer";
 import API from "../utils/API";
 
+const ResultsStyle = {
+    color: 'white',
+    fontSize: '40px'
+};
+
+const ResultsContainer = {
+    backgroundColor: '#7A7882',
+    borderRadius:'10px',
+    margin: 'auto',
+    marginTop: '30px',
+    width: '50%'
+};
+
 class Search extends Component {
     state = {
         loaded: false,
@@ -22,10 +35,12 @@ class Search extends Component {
         return (
             <Wrapper>
                 <Nav />
-                { this.state.farmers.length
-                    ? this.state.farmers.map(farmer => (<Link to={`/farmer/${farmer._id}`} key={farmer._id}>{farmer.Name}</Link>))
-                    : <h1 className="text-center">{ this.state.loaded ? 'No Results' : 'Loading...' }</h1>
-                }
+                <div style={ResultsContainer}>
+                    { this.state.farmers.length
+                        ? this.state.farmers.map(farmer => (<div><Link style={ResultsStyle} id="farmerLink" to={`/farmer/${farmer._id}`} key={farmer._id}>{farmer.Name}</Link></div> ))
+                        : <h1 className="text-center">{ this.state.loaded ? 'No Results' : 'Loading...' }</h1>
+                    }
+                </div>
                 <Footer />
             </Wrapper>
         );

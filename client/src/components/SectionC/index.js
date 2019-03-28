@@ -3,7 +3,7 @@ import './SectionC.scss';
 import Button from 'react-bootstrap/Button';
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 
-function SectionC(props) {
+function SectionC() {
   return (
     <section>
       <ButtonToolbar className="bttnGroup">
