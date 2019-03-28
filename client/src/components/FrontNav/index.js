@@ -5,6 +5,11 @@ import Button from 'react-bootstrap/Button';
 import "./frontNav.scss";
 import Logo from '../../../src/logo.svg';
 
+const ButtonStyle ={
+  backgroundColor: '#F1DC89',
+  color: 'black'
+};
+
 class FrontNav extends Component {
   render() {
     return (
@@ -24,7 +29,7 @@ class FrontNav extends Component {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Button variant="primary" className="btn-margin" onClick={this.props.login}>
+            <Button style={ButtonStyle}  className="btn-margin" onClick={this.props.login}>
               Log In
             </Button>
           </Nav>

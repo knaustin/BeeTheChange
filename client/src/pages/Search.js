@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 import API from "../utils/API";
 
 const ResultsStyle = {
-    color: 'black',
+    color: 'white',
     fontSize: '40px'
 };
 
