@@ -4,7 +4,7 @@ function SectionA() {
   return (
     <div>
      <header className="changeHead">
-     <h1>About "Be The Change":</h1>
+     <h1>About "Be The Change"</h1>
      </header>
       <h3>"Be The Change" is an application that allows farmers to get sponsorships to care for their bees. People can sign up and sponsor farmers inexchange for rewards based off of their donation."Be The Change" main goal is to help save the bee population which is quickly dwindling. By sponsoring bee hives, community gardens, and farmers, you can contribute to ensuring your tomorrow.  </h3>
       <br />
