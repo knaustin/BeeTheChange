@@ -20,7 +20,7 @@ function MainNav() {
           {' Bee The Change '}
         </span>
       </Navbar.Brand>
-      <Nav.Link href="/" className={"MainNav"}>|| Home</Nav.Link>
+      <Nav.Link href="/" className={"MainNav"}>|| Logout</Nav.Link>
       <Nav.Link href="/settings" className={"MainNav"}>|| Settings</Nav.Link>
       <Nav.Link href="/developers" className={"MainNav"}>|| The Team</Nav.Link>
       {/* <Nav.Link href="/logout" className={"MainNav"}>|| Logout</Nav.Link> */}
