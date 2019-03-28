@@ -5,8 +5,7 @@ import Search from "./pages/Search";
 import Settings from "./pages/Settings";
 import Devpage from './pages/Devpage';
 import Main from "./pages/Main";
-import User from './pages/User'
-import Login from './pages/login'
+import User from './pages/User';
 
 
 
@@ -21,7 +20,7 @@ class App extends Component {
       <Router>
         <Switch>
           <Route path="/" component={Main} />
-          <Route exact path="/login" component={Login} />
+          <Route path="/home" component={Main} />
           <Route exact path="/farmer/:id" component={Farmer} />
           <Route exact path="/search" component={Search} />
           <Route exact path="/user" component={User} />
